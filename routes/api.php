@@ -6,7 +6,7 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\OrderController;
 
-Route::get('/user', function (Request $request) {
+Route::get('v1/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
