@@ -28,7 +28,7 @@ class UserService
                 $q->where("id", $request->user()->id);
             })
             ->orderBy("name", "ASC")
-            ->paginate(10);
+            ->get();
 
             return $users;
         }
