@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Auth;
 
+use Illuminate\Http\JsonResponse;
 use App\Helpers\ResponseFormatter;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Foundation\Http\FormRequest;
@@ -38,11 +39,15 @@ class RegisterRequest extends FormRequest
     {
         $errors = (new ValidationException($validator))->errors();
 
-        throw new HttpResponseException(
-            ResponseFormatter::validationError([
-                    'message' => 'Validation errors',
-                    'errors' => $errors
-            ])
-        );
+        // throw new HttpResponseException(
+        //     ResponseFormatter::validationError([
+        //             'message' => 'Validation errors',
+        //             'errors' => $errors
+        //     ])
+        // );
+        throw new HttpResponseException(response()->json([
+            'errors' => $validator->errors(),
+            'status' => true
+            ], JsonResponse::HTTP_UNPROCESSABLE_ENTITY));
     }
 }
