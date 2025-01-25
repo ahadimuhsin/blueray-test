@@ -6,15 +6,14 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\OrderController;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
-
 Route::prefix('v1')->group(function(){
     Route::post("register", [AuthController::class, "register"]);
     Route::post("login", [AuthController::class, "login"]);
 
     Route::middleware("auth:sanctum")->group(function(){
+        Route::get("user", function(Request $request){
+            return $request->user();
+        });
         Route::get("users", [UserController::class, "index"]);
         Route::get("users/{id}", [UserController::class, "show"]);
         Route::put("users/{id}", [UserController::class, "update"]);
