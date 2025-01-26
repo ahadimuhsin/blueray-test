@@ -69,13 +69,14 @@ Bisa menggunakan XAMPP atau Laragon versi PHP terbaru supaya lebih mudah
 
   Sebagai admin
     ```
-admin1@mail.com
-Password123#
-```
-Sebagai user
-```
-user1@mail.com
-Password123#
-```
+    admin1@mail.com
+    Password123#
+    ```
+  Sebagai user
+    ```
+    user1@mail.com
+    Password123#
+    ```
+    
 ## Dokumentasi
 Dokumentasi endpoint dapat dilihat di link [ini](https://documenter.getpostman.com/view/10026548/2sAYQgg8Ti "ini")
