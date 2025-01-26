@@ -104,7 +104,7 @@ class OrderService
             return $saveOrder;
         } catch (Exception $e) {
             DB::rollBack();
-            Log::error($e->getMessage());
+            Log::error($e);
 
             throw new Exception($e->getMessage(), 500);
         }
