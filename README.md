@@ -65,18 +65,18 @@ Bisa menggunakan XAMPP atau Laragon versi PHP terbaru supaya lebih mudah
    ```bash
    php artisan migrate --seed
    ```
-  Perintah ini akan menambahkan dua data ke tabel users
+  Perintah ini akan menambahkan dua data ke tabel users sebagai perwakilan masing-masing role
 
-  Sebagai admin
-    ```bash
-    admin1@mail.com
-    Password123#
-    ```
-  Sebagai user
-    ```bash
-    user1@mail.com
-    Password123#
-    ```
+  Admin
+```bash
+admin1@mail.com
+Password123#
+```
+  User
+```bash
+user1@mail.com
+Password123#
+```
     
 ## Dokumentasi
 Dokumentasi endpoint dapat dilihat di link [ini](https://documenter.getpostman.com/view/10026548/2sAYQgg8Ti "ini")
