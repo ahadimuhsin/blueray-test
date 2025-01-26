@@ -68,12 +68,12 @@ Bisa menggunakan XAMPP atau Laragon versi PHP terbaru supaya lebih mudah
   Perintah ini akan menambahkan dua data ke tabel users
 
   Sebagai admin
-    ```
+    ```bash
     admin1@mail.com
     Password123#
     ```
   Sebagai user
-    ```
+    ```bash
     user1@mail.com
     Password123#
     ```
