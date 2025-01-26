@@ -90,6 +90,7 @@ class OrderService
              ])->post(config("biteship.base_url")."/v1/orders", $payload);
 
              if ($orderBiteShip->failed()) {
+                Log::error($orderBiteShip->json());
                  throw new Exception("Failed to create order at Biteship API", 500);
              }
 
